@@ -1,0 +1,30 @@
+config:
+  pulumi-rke-cluster:name: home.lbrlabs
+  pulumi-rke-cluster:nodes:
+  - address: venus.home.lbrlabs.com
+    roles:
+    - worker
+    - etcd
+    - controlplane
+    user: lbriggs
+  - address: pluto.home.lbrlabs.com
+    roles:
+    - worker
+    - etcd
+    - controlplane
+    user: lbriggs
+  - address: saturn.home.lbrlabs.com
+    roles:
+    - worker
+    - etcd
+    - controlplane
+    user: lbriggs
+  - address: jupiter.home.lbrlabs.com
+    roles:
+    - worker
+    user: lbriggs
+  pulumi-rke-cluster:sans:
+  - k.vpn.lbrlabs.com
+  - k.home.lbrlabs.com
+  - kube.vpn.lbrlabs.com
+  - kube.home.lbrlabs.com
